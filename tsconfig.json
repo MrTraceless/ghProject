@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                          // Modern enough JS output
+    "module": "CommonJS",                        // Node.js compatible module system
+    "lib": ["ES2020"],                          // Support modern features
+    "strict": true,                             // Enable strict type-checking
+    "esModuleInterop": true,                    // Allows default import compatibility
+    "skipLibCheck": true,                       // Speeds up compilation
+    "forceConsistentCasingInFileNames": true,  // Prevents casing issues in imports
+    "outDir": "dist",                           // JS output directory on tsc build
+    "sourceMap": true                           // Helpful for debugging compiled JS
+  },
+  "include": [
+    "publishReport/**/*.ts",
+    "tests/**/*.ts",                           // your tests folder for Playwright
+    "src/**/*.ts"                             // adjust as needed for your source files
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

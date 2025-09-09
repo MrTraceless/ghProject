@@ -6,10 +6,10 @@
   "types": "dist/types.d.ts",
   "scripts": {
     "create-timestamp": "ts-node publishReport/create-timestamp.ts",
-    "publish-report": "ts node publishReport/publishGhReport.ts",
+    "publish-report": "ts-node publishReport/publishGhReport.ts",
     "test:start": "npx playwright test",
-    "start:test:report": "npm run create-timestamp; npm run test:start",
-    "run:test-and-publish":  "npm run start:test:report; npm run publish-report"
+    "start:test:report": "npm run create-timestamp && npm run test:start",
+    "run:test-and-publish": "npm run start:test:report && npm run publish-report"
   },
   "dependencies": {
     "dayjs": "^1.11.9",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^24.3.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.0"

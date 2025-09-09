@@ -5,7 +5,7 @@ import { generateIndexHtml } from './htmlGenerator';
 
 const sourceDir = 'playwright-report';
 const tempResultsFilePath = 'run_results.json'; // path to test results JSON
-const repoBaseUrl = 'https://github.com/your-org/your-repo.git'; // replace with your repo URL
+const repoBaseUrl = 'https://github.com/MrTraceless/ghProject'; // replace with your repo URL
 const branch = 'gh-pages';
 const tempPublishDir = 'temp-publish-dir';
 const metadataFileName = 'report_index_data.json';
