@@ -4,36 +4,52 @@
     <head>
       <title>Test Automation Reports</title>
       <style>
-        body { background: #15171c; color: #eef; font-family: Arial, sans-serif; }
-        .container { margin: 40px auto; max-width: 760px; background: #21232a; padding: 24px; border-radius: 12px; }
-        h2 { text-align: center; margin-bottom: 36px;}
-        ul { list-style: none; padding: 0; }
-        li { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding: 12px 24px; border-radius: 8px; background: #191b22;}
-        li.status-failed { background: #310a18; }
-        li.status-passed { background: #122b16; }
-        li.status-timeout { background: #34221f; }
-        li.status-nodata { opacity: 0.65;}
-        a { text-decoration: none; color: #59a5f6; font-weight: bold; }
-        span { font-size: 1.08em; letter-spacing: 1px; }
+        body { background: #181a20; color: #d5d8de; font-family: 'Segoe UI', Arial, sans-serif; margin:0;}
+        .center-panel {
+          max-width: 760px; margin: 60px auto;
+          background: #21232a; border-radius: 16px; padding: 36px;
+        }
+        h2 {
+          text-align:center; margin-bottom:32px; color:#fafafa;
+          letter-spacing:1px;
+        }
+        .run-row {
+          background:#191b22; margin-bottom:14px; border-radius:8px;
+          display:flex; align-items:center; justify-content:space-between; padding:16px 28px; transition:background .2s;
+        }
+        .status-failed { background:#311021; }
+        .status-passed { background:#122b16; }
+        .status-timeout { background:#31291e; }
+        .status-nodata { background:#191b22; opacity:0.65; }
+        a {
+          color:#59a5f6; text-decoration:none; font-size:1.17em; font-weight:600;
+        }
+        .result-span {
+          font-size:1.13em;
+        }
       </style>
     </head>
     <body>
-      <div class="container">
+      <div class="center-panel">
         <h2>Test Automation Reports</h2>
-        <ul>
-          
-      <li class="status-nodata">
+        
+      <div class="run-row status-nodata">
         <a href="./report-2025-09-09_22-15-18/index.html">2025-09-09_22-15-18</a>
-        <span>Results N/A</span>
-      </li>
+        <span class="result-span">Results N/A</span>
+      </div>
     
 
-      <li class="status-nodata">
+      <div class="run-row status-nodata">
         <a href="./report-2025-09-09_22-22-32/index.html">2025-09-09_22-22-32</a>
-        <span>Results N/A</span>
-      </li>
+        <span class="result-span">Results N/A</span>
+      </div>
     
-        </ul>
+
+      <div class="run-row status-nodata">
+        <a href="./report-2025-09-09_22-27-55/index.html">2025-09-09_22-27-55</a>
+        <span class="result-span">Results N/A</span>
+      </div>
+    
       </div>
     </body>
     </html>
