@@ -6,22 +6,27 @@
   "types": "dist/types.d.ts",
   "scripts": {
     "create-timestamp": "ts-node publishReport/create-timestamp.ts",
+    "test:run-with-timestamp": "npm run create-timestamp && ts-node publishReport/run-playwright-with-timestamp.ts",
+    "extract-summary": "ts-node publishReport/extract-results-summary.ts",
     "publish-report": "ts-node publishReport/publishGhReport.ts",
-    "test:start": "npx playwright test",
-    "start:test:report": "npm run create-timestamp && npm run test:start",
-    "run:test-and-publish": "npm run start:test:report && npm run publish-report"
+    "run:test-and-publish": "npm run test:run-with-timestamp && npm run extract-summary && npm run publish-report",
+    "test:debug": "npx playwright test --debug",
+    "test:headed": "npx playwright test --headed"
   },
   "dependencies": {
     "dayjs": "^1.11.9",
     "dotenv": "^16.0.3",
     "fs-extra": "^11.1.1",
+    "node-fetch": "^3.3.2",
     "simple-git": "^3.15.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^24.3.1",
-    "ts-node": "^10.9.1",
+    "@types/node-fetch": "^2.6.13",
+    "cross-env": "^10.0.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.0.0"
   },
   "repository": {
