@@ -64,5 +64,11 @@
     "failed": 0,
     "timedOut": 0,
     "skipped": 0
+  },
+  "report-2025-09-10_13-40": {
+    "passed": 2,
+    "failed": 0,
+    "timedOut": 0,
+    "skipped": 0
   }
 }
